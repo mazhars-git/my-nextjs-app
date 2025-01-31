@@ -1,11 +1,19 @@
-import Link from "next/link";
+"use client";
+
+import { useRouter } from "next/navigation";
 
 const HomePage = () => {
+  const router = useRouter();
+  const handleNavigation = () => {
+    router.push("/dashboard");
+  };
   return (
     <div className="text-center">
       <h1 className="text-4xl text-center">Welcome to Next.js Home page</h1>
 
-      <button className="my-5">Dashboard</button>
+      <button onClick={handleNavigation} className="my-5">
+        Dashboard
+      </button>
     </div>
   );
 };
