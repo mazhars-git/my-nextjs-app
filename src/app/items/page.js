@@ -4,7 +4,7 @@ const ItemsPage = async () => {
   const res = await fetch("http://localhost:5000/meals", {
     cache: "no-store",
   });
-  const items = await res.json();
+  const items = await res.json;
 
   //   console.log(items);
   return (
